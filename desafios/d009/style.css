@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(50, 50, 50);
+}
+div{
+    text-align: center;
+    color: white;
+}
+.curso{
+    text-decoration: none;
+}
+
+.curso:hover{
+    text-decoration: underline;
+}

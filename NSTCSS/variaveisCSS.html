@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis</title>
+    <style>
+        :root {
+            --bg-color: rgb(0, 204, 255);
+            --bg-color2: rgb(255, 93, 72);
+            --bg-color3: rgb(40, 168, 40);
+            --cor-do-texto: #fff;
+            --espacamento: 20px;
+            --border-rad: 20px;
+            --margem: 10px;
+        }
+
+        #div1, #div2, #div3 {
+            padding: var(--espacamento);
+            border-radius: var(--border-rad);
+            margin: var(--margem);
+            color: var(--cor-do-texto);
+        }
+        #div1 {
+            background-color: var(--bg-color);
+        }
+
+        #div2 {
+            background-color: var(--bg-color2);
+        }
+
+        #div3 {
+            background-color: var(--bg-color3);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet, aliquam accusantium dignissimos iure
+            dolorem at itaque voluptatibus! Minus mollitia voluptatibus temporibus omnis aut nam, numquam quam
+            reiciendis repellat cum.</p>
+    </div>
+
+    <div id="div2">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet, aliquam accusantium dignissimos iure
+            dolorem at itaque voluptatibus! Minus mollitia voluptatibus temporibus omnis aut nam, numquam quam
+            reiciendis repellat cum.</p>
+    </div>
+
+    <div id="div3">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet, aliquam accusantium dignissimos iure
+            dolorem at itaque voluptatibus! Minus mollitia voluptatibus temporibus omnis aut nam, numquam quam
+            reiciendis repellat cum.</p>
+    </div>
+
+</body>
+
+</html>

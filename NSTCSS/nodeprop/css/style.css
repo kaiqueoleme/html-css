@@ -1,10 +1,13 @@
-/* RESET */
+/* =============== RESET ============= */
 :root {
     --bg-color1: #f5f5f5;
-    --bg-color2: rgba(0, 0, 0, 0.9);
+    --bg-color2: #000000e6;
     --color1: #ce2e3c;
     --color2: #da6709;
-    --text-color: #ffffff;
+    --color3: #130400;
+    --color4: #ffffff;
+    --color5: #ffffff4d;
+    --color6: #ffffffb3;
 }
 
 * {
@@ -34,12 +37,26 @@ img {
     max-width: 100%;
 }
 
-/* CABEÇALHO */
-.cabecalho {
+/* =============== CONTAINER ============= */
+
+.container {
     width: 100%;
     float: left;
     padding: 3% 4%;
+    text-align: center;
 }
+
+/* =============== COLORS ============= */
+
+.bg-gradient {
+    background: linear-gradient(to right, var(--color1), var(--color2));
+}
+
+.colorDark {
+    color: var(--color3);
+}
+
+/* CABEÇALHO */
 
 .logo {
     width: 56px;
@@ -54,10 +71,9 @@ img {
     height: 56px;
     float: right;
     text-align: center;
-    color: var(--text-color);
+    color: var(--color4);
     border-radius: 56px;
     cursor: pointer;
-    background: linear-gradient(to right, var(--color1), var(--color2));
 }
 
 /* MENU */
@@ -73,11 +89,11 @@ img {
 }
 
 .btn-close {
-    font-size: 3em;
-    color: var(--text-color);
+    font-size: 1.5em;
+    color: var(--color4);
     float: right;
     cursor: pointer;
-    margin-right: 5%;
+    margin: 2% 3% 0 0;
 }
 
 .menu ul {
@@ -92,7 +108,7 @@ img {
 
 .menu li a {
     font-size: 2em;
-    color: var(--text-color);
+    color: var(--color4);
     padding: 1.5% 3%;
 }
 
@@ -103,20 +119,282 @@ img {
 /* BANNER */
 
 .banner {
-    width: 100%;
-    float: left;
-    text-align: center;
-    padding: 3% 4%;
     background: url(../img/bg.jpg) no-repeat fixed;
 }
 
 .banner h2 {
     font-size: 2.5em;
-    color: var(--text-color);
+    color: var(--color4);
     font-weight: 700;
 }
 
 .banner h3 {
     font-size: 1.5em;
-    color: var(--text-color);
+    color: var(--color4);
+}
+
+.buttons {
+    width: 100%;
+    margin-top: 2%;
+}
+
+.buttons i {
+    float: right;
+}
+
+button.btn {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: left;
+    cursor: pointer;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+button.btn-cadastrar {
+    background-color: var(--color4);
+}
+
+button.btn-sobre {
+    background-color: var(--color3);
+    color: var(--color4);
+    margin-top: 2%;
+}
+
+/* SERVIÇOS */
+
+.servico {
+    width: 100%;
+    background-color: var(--color4);
+    text-align: left;
+    border-radius: 7px;
+    margin-bottom: 3%;
+}
+
+.servico img {
+    border-radius: 7px 7px 0 0;
+}
+
+.inner {
+    padding: 7%;
+}
+
+.inner a {
+    font-size: 1.5em;
+    color: var(--color3);
+    font-weight: 700;
+}
+
+.inner h4 {
+    font-size: 1.2em;
+    color: var(--color3);
+    margin-top: 2%;
+}
+
+.inner p {
+    margin-top: 6%;
+    color: var(--color3);
+    line-height: 1.5em;
+}
+
+/* NEWSLETTER*/
+
+.newsletter {
+    background-color: var(--color3);
+}
+
+.newsletter h2 {
+    font-size: 1.5em;
+    color: var(--color4);
+    font-weight: 700;
+}
+
+.newsletter h3 {
+    color: var(--color4);
+}
+
+.newsletter form {
+    margin-top: 2%;
+}
+
+.newsletter input {
+    width: 100%;
+    background-color: var(--color3);
+    color: var(--color4);
+    border: 1px solid var(--color5);
+    padding: 5%;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    width: 100%;
+    background-color: var(--color4);
+    
+    padding: 5%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+/* RODAPÉ */
+
+section.social-icons a {
+    font-size: 1.5em;
+    color: var(--color6);
+    margin-right: 3%;
+}
+
+section.social-icons a:last-child {
+    margin-right: 0;
+}
+
+section.social-icons a:hover {
+    color: var(--color4);
+}
+
+p.copyright {
+    margin-top: 2%;
+    color: var(--color6);
+}
+
+/* MEDIA TYPES
+screen
+Para monitores ou dispositivos com telas coloridas e resolução adequada.
+print
+Para impressoras. Muito usado para dar uma versão de impressão do site.
+*/
+
+/* =============== MOBILE FIRST ============= */
+/* SMALL DEVICES - SMARTPHONES*/
+
+@media screen and (min-width: 480px) {
+    .logo {
+        width: 214px;
+        float: left;
+        background: url(../img/logo.png)  center center/214px no-repeat;
+    }
+
+    button.btn {
+        font-size: 2em;
+    }
+}
+
+/* SMALL DEVICES - TABLETS*/
+
+@media screen and (min-width: 768px) {
+    .servico {
+        width: 49%;
+        float: left;
+        margin-right: 2%;
+    }
+
+    .servico:nth-child(2) {
+        margin-right: 0;
+    } 
+
+    .newsletter h2 {
+        font-size: 2em;
+    }
+
+    .newsletter h3 {
+        font-size: 1.5em;
+    }
+
+    .newsletter input {
+        width: 70%;
+        padding: 2%;
+        float: left;
+        margin-right: 1%;
+    }
+
+    .newsletter button {
+        width: 29%;
+        padding: 2%;
+        float: right;
+        margin-top: 0;
+    }
+}
+
+/* MEDIUM DEVICES - TABLETS & DESKTOPS*/
+
+@media screen and (min-width: 960px) {
+    .title {
+        width: 70%;
+        float: left;
+        text-align: left;
+    }
+
+    .title h2 {
+        font-size: 3em;
+    }
+
+    .title h3 {
+        font-size: 2em;
+    }
+
+    .buttons {
+        width: 30%;
+        float: right;
+        margin-top: 0;
+    }
+
+    .servico {
+        width: 32%;
+    }
+
+    .servico:nth-child(2) {
+        margin-right: 2%;
+    } 
+
+    .servico:nth-child(3) {
+        margin-right: 0;
+    } 
+
+    .newsletter input {
+        width: 60%;
+        float: none;
+    }
+
+    .newsletter button {
+        width: 20%;
+        float: none;
+    }
+}
+
+/* LARGE DEVICES - WIDE SCREENS*/
+
+@media screen and (min-width: 1280px) {
+    .btn-menu {
+        display: none;
+    }
+
+    .btn-close {
+        display: none;
+    }
+
+    .menu {
+        width: auto;
+        height: 56px;
+        line-height: 56px;
+        float: right;
+        background-color: var(--bg-color1);
+        display: block !important;
+        position: static;
+    }
+
+    .menu li {
+        padding: 0;
+        float: left;
+    }
+
+    .menu li a {
+        color: var(--color3);
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .menu li a:hover {
+        border: none;
+        color: var(--color2);
+    }
 }

@@ -11,23 +11,28 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="Kaique de Oliveira Leme">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Link para o fontawesome, para usar os icons -->
     <script src="https://kit.fontawesome.com/e5972cb3d1.js" crossorigin="anonymous"></script>
+    <!-- Link para o google fonts e para a fonte Open Sans-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <!-- Icon na guia do navegador-->
     <link rel="icon" href="img/icon.png">
 </head>
 
 <body>
-    <header class="cabecalho">
+    <!-- Cabeçalho da Página-->
+    <header class="container">
         <a href="index.html">
             <h1 class="logo"> NodeProp - Especializada em Soluções Digitais </h1>
         </a>
-        <button class="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
+        <button class="btn-menu bg-gradient"><i class="fa fa-bars fa-lg"></i></button>
+        <!-- Menu de navegação para outras páginas-->
         <nav class="menu">
-            <a class="btn-close">x</a>
+            <a class="btn-close"><i class="fa fa-times"></i></a>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Clientes</a></li>
@@ -38,16 +43,72 @@
             </ul>
         </nav>
     </header>
-    <div class="banner">
+    <!-- Banner da página -->
+    <div class="container banner">
         <div class="title">
             <h2> OUSE INOVAR!</h2>
             <h3> Criamos experiências e estabelecemos ações estratégicas que conectam marcas e consumidores</h3>
         </div>
         <div class="buttons">
-            <button class="btn-cadastrar"> Cadastrar </button>
-            <button class="btn-sobre"> Sobre </button>
+            <button class="btn btn-cadastrar colorDark"> Cadastrar <i class="fa fa-arrow-circle-right"></i> </button>
+            <button class="btn btn-sobre"> Sobre <i class="fa fa-question-circle"></i></button>
         </div>
     </div>
+
+    <!-- Principal da página, com todos os serviços disponíveis pelo site-->
+     <!-- Cada serviço separado por um article com a classe "servico"-->
+    <main class="container">
+        <article class="servico">
+            <!-- Serviço de Campanhas publicitárias -->
+            <a href="#"><img src="img/criacoes.jpg" alt="Campanhas publicitárias"></a>
+            <div class="inner">
+                <a href="#"> Campanhas publicitárias</a>
+                <h4> Impressos, VTs e Jingles</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis vitae non pariatur asperiores, modi perferendis voluptatem eligendi accusantium molestias exercitationem inventore reiciendis dolores ipsa autem ipsam saepe. Cum, doloremque commodi.</p>
+            </div>
+        </article>
+        <!-- Serviço de Marketing Digital -->
+        <article class="servico">
+            <a href="#"><img src="img/md.jpg" alt="Marketing Digital"></a>
+            <div class="inner">
+                <a href="#"> Marketing Digital</a>
+                <h4> Administração de Redes Sociais</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis vitae non pariatur asperiores, modi perferendis voluptatem eligendi accusantium molestias exercitationem inventore reiciendis dolores ipsa autem ipsam saepe. Cum, doloremque commodi.</p>
+            </div>
+        </article>
+        <!-- Serviço de Criação de Sites -->
+        <article class="servico">
+            <a href="#"><img src="img/cs.jpg" alt="Criação de Sites"></a>
+            <div class="inner">
+                <a href="#"> Criação de Sites </a>
+                <h4> Sites Administráveis</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis vitae non pariatur asperiores, modi perferendis voluptatem eligendi accusantium molestias exercitationem inventore reiciendis dolores ipsa autem ipsam saepe. Cum, doloremque commodi.</p>
+            </div>
+        </article>
+    </main>
+    <!-- NEWSLETTER -->
+    <section class="container newsletter">
+        <h2> Inscreva-se agora! </h2>
+        <h3> Receba novidades, dicas e muito mais</h3>
+        <form action="" method="post">
+            <input type="email" name="email" placeholder="Seu email" id="">
+            <button class="colorDark"> Cadastrar </button>
+        </form>
+    </section>
+    <!-- RODAPÉ -->
+    <footer class="bg-gradient container">
+        <section class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+        </section>
+        <p class="copyright">
+            Copyright @ NodeProp 2016. Todos os direitos reservados.
+        </p>
+    </footer>
+    <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
         $(".btn-menu").click(function () {
